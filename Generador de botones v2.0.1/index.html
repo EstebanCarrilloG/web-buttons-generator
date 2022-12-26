@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <style id="butonStyles"></style>
+
+<div class="button-gen__container">
+  <h2 class ="button-gen__title">Generador de botones web</h2>
+  <div  class = "button-gen__content">
+    <div class="btngen-input">
+      <form class="input-Form " id="inputForm">
+        <h3 class="inputForm-Title">Propiedades:</h3>
+
+        <div class="inputForm-Content">
+          <div class="text-url-container">
+            <div class="imputForm-content__content">
+
+              <b>Text:</b>
+              <input type="text" class="input-text__text" id="buttonText" placeholder="Text" value=""
+                maxlength="20"></input>
+            </div>
+            <div class="imputForm-content__content">
+              <b>Url:</b>
+              <input type="text" class="input-text__url" id="buttonUrl" placeholder="Ejemplo:www.edeptec.com" value=""
+                maxlength="200"></input>
+            </div>
+            <a id="urlVerifyer" href="#">Verificar texto y url</a>
+          </div>
+          <div class="imputForm-content__content">
+            <b>Font-size:</b>
+            <input type="number" class="input-text" id="buttonFontSise" placeholder="Text" value="26" min="0"></input>
+            <b>px</b>
+          </div>
+          <div class="imputForm-content__content ">
+            <b>Font weight:</b>
+            <div class="aling-inputs">
+              <label class="checkboxLabel no-margin"><input class="input-checkbox" type="checkbox" id="cboxBlod"
+                  value="bold" checked>bold</label>
+            </div>
+          </div>
+          <div class="imputForm-content__content l-down">
+            <b>Height:</b>
+            <div class="aling-inputs close-containers-wh">
+              <input type="number" class="input-text" id="buttonHeight" placeholder="Height" value="40" min="0"></input>
+              <select id="buttonHeightSelect">
+                <option value="px" selected>px</option>
+                <option value="%">%</option>
+              </select>
+            </div>
+            <label class="checkboxLabel"><input class="input-checkbox cb-wh" type="checkbox" id="buttonHeightAuto"
+                value="none" checked>Auto</label>
+          </div>
+          <div class="imputForm-content__content l-down">
+            <b>Width:</b>
+            <div class="aling-inputs close-containers-wh">
+              <input type="number" class="input-text" id="buttonWidth" placeholder="Width" value="150" min="0"></input>
+              <select id="buttonWidthSelect">
+                <option value="px" selected>px</option>
+                <option value="%">%</option>
+              </select>
+            </div>
+            <label class="checkboxLabel"><input class="input-checkbox cb-wh" type="checkbox" id="buttonWidthAuto"
+                value="none" checked>Auto</label>
+          </div>
+          <div class="imputForm-content__content">
+            <b>Text Color:</b>
+            <input class="inputColor" type="color" id="colorTxt" value="#ffffff"></input>
+          </div>
+          <div class="imputForm-content__content">
+            <b>Background Color:</b>
+            <input class="inputColor" type="color" id="colorBg" value="#0091ff"></input>
+          </div>
+          <div class="imputForm-content__content l-down border-radius-container">
+            <b>Padding:</b>
+            <div class="close-containers l-down">
+              <div class="aling-inputs borderRadius-item">
+                <p>top: </p>
+                <input type="range" class="input-range" id="buttonPadding1" value="25"><div
+                  class="slider-value"></div>
+              </div>
+
+              <div class="aling-inputs borderRadius-item">
+                <p>right: </p>
+                <input type="range" class="input-range" id="buttonPadding2" value="25"><div
+                  class="slider-value"></div>
+              </div>
+              <div class="aling-inputs borderRadius-item">
+                <p>bottom: </p>
+                <input type="range" class="input-range" id="buttonPadding3" value="25"><div
+                  class="slider-value"></div>
+              </div>
+              <div class="aling-inputs borderRadius-item">
+                <p>left: </p>
+                <input type="range" class="input-range" id="buttonPadding4" value="25"><div
+                  class="slider-value"></div>
+              </div>
+            </div>
+
+            <label class="checkboxLabel"><input class="input-checkbox cb-l" type="checkbox" id="remobeBoxShadow"
+                value="box-shadow">Sin padding</label>
+          </div>
+          <div class="imputForm-content__content l-down border-container">
+            <b>Border:</b>
+            <div class="close-containers l-down" id="borderContent">
+              <div class="aling-inputs">
+                <p>Grosor:</p>
+                <input type="number" class="input-text" id="buttonBorderPx" value="3"></input>
+                <p style="margin:0 0.5rem;">px</p>
+              </div>
+              <div class="aling-inputs">
+                <p>Tipo:</p>
+                <select id="buttonTypeSelect">
+                  <option value="solid" selected>solid</option>
+                  <option value="dashed">dashed</option>
+                  <option value="outset">outset</option>
+                </select>
+              </div>
+              <div class="aling-inputs">
+                <p>Color:</p>
+                <input class="inputColor" type="color" id="colorBdr" value="#ffffff"></input>
+              </div>
+            </div>
+
+            <label class="checkboxLabel"><input class="input-checkbox cb-l" type="checkbox" id="buttonBorderFalse"
+                value="border" checked>Sin borde</label>
+
+          </div>
+          <div class="imputForm-content__content l-down border-radius-container">
+            <b>Border-radius:</b>
+            <div class="close-containers l-down">
+              <div class="aling-inputs borderRadius-item">
+                <input type="range" class="input-range" id="buttonBR1" value="25"><div class="slider-value"></div>
+              </div>
+              <div class="aling-inputs borderRadius-item">
+                <input type="range" class="input-range" id="buttonBR2" value="25"><div class="slider-value"></div>
+              </div>
+              <div class="aling-inputs borderRadius-item">
+                <input type="range" class="input-range" id="buttonBR3" value="25"><div class="slider-value"></div>
+              </div>
+              <div class="aling-inputs borderRadius-item">
+                <input type="range" class="input-range" id="buttonBR4" value="25"><div class="slider-value"></div>
+              </div>
+            </div>
+
+            <label class="checkboxLabel"><input class="input-checkbox cb-l" type="checkbox" id="remobeBoxShadow"
+                value="box-shadow" checked>Sin border radius</label>
+
+
+          </div>
+          <div class="imputForm-content__content l-down box-shadow-container">
+            <b>Box shadow:</b>
+            <div class="close-containers l-down" id="boxShadowContent">
+              <div class="aling-inputs">
+                <p>Tipo:</p>
+                <select id="boxShadowType">
+                  <option value="" selected>outset</option>
+                  <option value="inset">inset</option>
+
+                </select>
+              </div>
+              <div class="aling-inputs boxshadow-item">
+                <p>Distancia en X:</p><input type="range" class="input-range" id="boxShadowX" min="-20" max="20"
+                  step="0.1"><div class="slider-value"></div>
+              </div>
+              <div class="aling-inputs boxshadow-item">
+                <p>Distancia en Y:</p>
+                <input type="range" class="input-range" id="boxShadowY" min="-20" max="20" step="0.1" value="2.5"><div
+                  class="slider-value"></div>
+
+              </div>
+              <div class="aling-inputs boxshadow-item">
+                <p>Desenfoque:</p><input type="range" class="input-range" id="boxShadowDesenfoque" min="0" max="20"
+                  step="0.1" value="5.7"><div class="slider-value"></div>
+              </div>
+              <div class="aling-inputs boxshadow-item">
+                <p>Dispercion:</p><input type="range" class="input-range" id="boxShadowDispercion" min="0" max="20"
+                  step="0.1" value="0"><div class="slider-value"></div>
+              </div>
+              <div class="imputForm-content__content">
+                <p>Color:</p>
+                <input class="inputColor" type="color" id="boxShadowColor" value="#0091ff"><div
+                  class="slider-value"></div>
+              </div>
+            </div>
+
+            <label class="checkboxLabel"><input class="input-checkbox cb-l" type="checkbox" id="remobeBoxShadow"
+                value="box-shadow" checked>Sin box-shadow</label>
+
+          </div>
+        </div>
+      </form>
+
+      <form class="input-Form">
+        <h3 class="inputForm-Title">Hover:</h3>
+        <div class="inputForm-Content">
+          <div class="imputForm-content__content">
+            <b>Background Color:</b>
+            <input class="inputColor" type="color" id="hoverBg" value="#ffffff"></input>
+          </div>
+          <div class="imputForm-content__content ">
+            <b>Text Color:</b>
+            <input class="inputColor" type="color" id="hoverTxt" value="#0091ff"></input>
+          </div>
+          <div class="imputForm-content__content l-down border-container">
+            <b>Border:</b>
+            <div class="close-containers  l-down" id="borderContentH">
+              <div class="aling-inputs">
+                <p>Grosor:</p>
+                <input type="number" class="input-text" id="buttonHoverBorderPx" value="3"></input>
+                <p style="margin:0 0.5rem;">px</p>
+              </div>
+              <div class="aling-inputs">
+                <p>Tipo:</p>
+                <select id="buttonHoverTypeSelect">
+                  <option value="solid" selected>solid</option>
+                  <option value="dashed">dashed</option>
+                  <option value="outset">outset</option>
+                </select>
+              </div>
+              <div class="aling-inputs">
+                <p>Color:</p>
+                <input class="inputColor" type="color" id="colorHoverBdr" value="#ffffff"></input>
+              </div>
+            </div>
+
+            <label class="checkboxLabel"><input class="input-checkbox cb-l" type="checkbox" id="buttonHoverBorderFalse"
+                value="none" checked>Mantener borde inicial</label>
+
+          </div>
+          <div class="imputForm-content__content l-down border-radius-container">
+            <b>Border-radius:</b>
+            <div class="close-containers l-down">
+              <div class="aling-inputs borderRadius-item">
+                <input type="range" class="input-range" id="buttonHoverBR1" value="0"><div class="slider-value"></div>
+              </div>
+              <div class="aling-inputs borderRadius-item">
+                <input type="range" class="input-range" id="buttonHoverBR2" value="0"><div class="slider-value"></div>
+              </div>
+              <div class="aling-inputs borderRadius-item">
+                <input type="range" class="input-range" id="buttonHoverBR3" value="0"><div class="slider-value"></div>
+              </div>
+              <div class="aling-inputs borderRadius-item">
+                <input type="range" class="input-range" id="buttonHoverBR4" value="0"><div class="slider-value"></div>
+              </div>
+            </div>
+            <label class="checkboxLabel"><input class="input-checkbox cb-l" type="checkbox" id="buttonHoverBorderFalse"
+                value="none" checked>Mantener border radius inicial</label>
+          </div>
+          <div class="imputForm-content__content l-down box-shadow-container">
+            <b>Box shadow:</b>
+            <div class="close-containers l-down" id="boxShadowContentH">
+              <div class="aling-inputs">
+                <p>Tipo:</p>
+                <select id="boxShadowTypeH">
+                  <option value="" selected>outset</option>
+                  <option value="inset">inset</option>
+
+                </select>
+              </div>
+              <div class="aling-inputs boxshadowH-item">
+                <p>Distancia en X:</p><input type="range" class="input-range" id="boxShadowXH" min="-20" max="20"
+                  step="0.1"><div class="slider-value"></div>
+              </div>
+              <div class="aling-inputs boxshadowH-item">
+                <p>Distancia en Y:</p>
+                <input type="range" class="input-range" id="boxShadowYH" min="-20" max="20" step="0.1" value="0"><div
+                  class="slider-value"></div>
+
+              </div>
+              <div class="aling-inputs boxshadowH-item">
+                <p>Desenfoque:</p><input type="range" class="input-range" id="boxShadowDesenfoqueH" min="0" max="20"
+                  step="0.1" value="0"><div class="slider-value"></div>
+              </div>
+              <div class="aling-inputs boxshadowH-item">
+                <p>Dispercion:</p><input type="range" class="input-range" id="boxShadowDispercionH" min="0" max="20"
+                  step="0.1" value="0"><div class="slider-value"></div>
+              </div>
+              <div class="imputForm-content__content">
+                <p>Color:</p>
+                <input class="inputColor" type="color" id="boxShadowColorH" value="#0091ff"><div
+                  class="slider-value"></div>
+              </div>
+            </div>
+            <label class="checkboxLabel "><input class="input-checkbox cb-l" type="checkbox" id="remobeBoxShadowH"
+                value="none" checked>Mantener Box shadow inicial</label>
+
+          </div>
+        </div>
+      </form>
+    </div>
+
+
+
+    <div id="outputForm">
+      <h3 class = "outputForm-title">Previsualización:</h3>
+      
+      <div id="demo">
+        <div class="imputForm-content__content demo-bg">
+          <input class="input-checkbox" type="color" id="demoBackgroundColor" value="#C7C7C7">Color de fondo
+        </div>
+        
+        <a class="button btnTextoGenerator" href="#" id="myButton">Demo Text</a>
+      </div>
+      <h3 class = "outputForm-title">Código HTML:</h3>
+      <pre class ="pre-container pre-1" id="htmlOutput" style="background-color: #282c34; color: #abb2bf; font-family: Consolas, 'Courier New', monospace; font-size: 14px; font-weight: normal; line-height: 19px; white-space: pre;"></pre>
+      <h3 class = "outputForm-title">Código CSS:</h3>
+      <pre class ="pre-container" id="cssOutput" style="background-color: #282c34; color: #abb2bf; font-family: Consolas, 'Courier New', monospace; font-size: 14px; font-weight: normal; line-height: 19px; white-space: pre;"></pre>
+
+    </div>
+
+
+  </div>
+</div>
+
+<div class="notification-container">
+  <div class="url-notification-container" id = "btngenUrlNotifContainer"></div>
+  <div class="text-notification-container" id= "btngenTxtNotifContainer"></div>
+
+</div>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js' type='text/javascript'></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
