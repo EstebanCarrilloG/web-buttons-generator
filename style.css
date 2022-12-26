@@ -185,8 +185,8 @@
 
   #demo .demo-bg{
     position: absolute;
-    top:10;
-    left:10;
+    top:0;
+    left:0;
   }
 
   .demo-bg{
@@ -222,8 +222,8 @@ border: 1px solid rgba(255, 255, 255, 0.12);
     display: grid;
     gap: 0.7rem;
     color: white;
-    top: -100;
-    left: 25;
+    top: -100px;
+    left: 0.9rem;
     z-index: 9;
     width: fit-content;
     transition: all 0.2s ease-in;
@@ -231,7 +231,7 @@ border: 1px solid rgba(255, 255, 255, 0.12);
   }
 
   .notification-container-open {
-    top: 50;
+    top: 0.9rem;
 
   }
 
